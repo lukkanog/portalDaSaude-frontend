@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../assets/img/poa-logo.png">
+    <link rel="icon" href="../assets/img/poa-logo.png">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600,700,800&display=swap" rel="stylesheet">
-    <link href="../../css/index.css" rel="stylesheet">
-    <link href="../../css/admin.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/admin.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Administrar Serviços | Portal da Saúde</title>
+    <title>Adicionar Usuário | Portal da Saúde</title>
 </head>
 <span id="menu_icon">
-    <img src="../../assets/img/menu-icon.png" alt="Abrir/fechar o menu de navegação">
+    <img src="../assets/img/menu-icon.png" alt="Abrir/fechar o menu de navegação">
 </span>
 <nav class="sidebar">
     <a href="admin.html">
         <div class="logo_box">
-            <img class="logo" src="../../assets/img/poa-logo.png" alt="Símbolo da Estância Hidromineral de Poá" />
+            <img class="logo" src="../assets/img/poa-logo.png" alt="Símbolo da Estância Hidromineral de Poá" />
             <h1>
                 Portal da
                 <br />
@@ -29,50 +29,50 @@
     <ul>
         <li>
             <a href="locais.html" class="nav_link">
-                <img src="../../assets/img/adm-icon.png" alt="" />
+                <img src="../assets/img/adm-icon.png" alt="" />
                 <p>Locais de atendimento</p>
             </a>
         </li>
         <li>
             <a href="servicos.html" class="nav_link">
-                <img src="../../assets/img/adm-icon.png" alt="" />
+                <img src="../assets/img/adm-icon.png" alt="" />
                 <p>Serviços de saúde</p>
             </a>
         </li>
         <li>
-            <a href="areas.html" class="nav_link">
-                <img src="../../assets/img/adm-icon.png" alt="" />
+            <a href="../areas.html" class="nav_link">
+                <img src="../assets/img/adm-icon.png" alt="" />
                 <p>Áreas de atendimento</p>
             </a>
         </li>
         <li>
             <a href="eventos.html" class="nav_link">
-                <img src="../../assets/img/adm-icon.png" alt="" />
+                <img src="../assets/img/adm-icon.png" alt="" />
                 <p>Campanhas</p>
             </a>
         </li>
         <li>
-            <a href="usuarios.html" class="nav_link">
-                <img src="../../assets/img/adm-icon.png" alt="" />
+            <a href="../usuarios.html" class="nav_link">
+                <img src="../assets/img/adm-icon.png" alt="" />
                 <p>Adicionar administrador</p>
             </a>
         </li>
         <li id="login">
             <a href="../login.html" class="nav_link">
-                <img class="not_rotated" id="login-logout_icon" src="../../assets/img/logout-icon.png" alt="" />
+                <img class="not_rotated" id="login-logout_icon" src="../assets/img/logout-icon.png" alt="" />
                 <p id="login_text">Sair</p>
             </a>
         </li>
 
         <!-- <li id="cadastro">
-            <a href="../../#" class="nav_link">
-                <img src="../../assets/img/register-icon.png" alt="" />
+            <a href="../#" class="nav_link">
+                <img src="../assets/img/register-icon.png" alt="" />
                 <p>Cadastrar-se</p>
             </a>
         </li>
         <li id="bairro" class="escondido">
-            <a href="../../#" class="nav_link">
-                <img src="../../assets/img/bairro-icon.png" alt="" />
+            <a href="../#" class="nav_link">
+                <img src="../assets/img/bairro-icon.png" alt="" />
                 <p>Meu Bairro</p>
             </a>
         </li> -->
@@ -82,7 +82,7 @@
 <main class="container">
     <div class="content">
         <div id="mobile_title" class="escondido">
-            <img class="logo" src="../../assets/img/poa-logo.png" alt="Símbolo da Estância Hidromineral de Poá" />
+            <img class="logo" src="../assets/img/poa-logo.png" alt="Símbolo da Estância Hidromineral de Poá" />
             <h2>
                 Portal da
                 <br />
@@ -90,53 +90,48 @@
             </h2>
         </div>
 
+        <h2 id="subtitle">
+            Adicionar novo administrador
+        </h2>
 
-        <div class="modal escondido" id="modal_servico">
-            <div class="modal_content">
-                <div class="titulo_e_botao">    
-                    <h2 class="form_title">Serviço</h2>
-                    <img class="close_icon" src="../../assets/img/add-icon.png" alt="Fechar formulário">
-                </div>
+        <p>Adicionar usuário com permissão de administrar as informações do Portal da Saúde</p>
 
-                <form id="servico_form" class="admin_form">
-
-                    <label for="nome_servico">Nome do serviço</label>
-                    <input type="text" name="nome_servico" id="nome_servico" maxlength="100" minlength="2" placeholder="Ex: Pronto Atendimento" required>
-
-                    <label for="categoria_servico">Área de atendimento (categoria) do serviço</label>
-                    <select name="categoria_servico" id="categoria_servico" required>
-                        <option disabled selected label="Selecione o tipo"></option>
-                    </select>
-                    <p class="form-observation">Observação: Caso não encontre a área de atendimento desejada, você pode cadastrar uma nova categoria na página <a href="areas.html">Áreas de atendimento</a></p>
-
-                    <input type="submit" value="Salvar" class="submit" id="submit_servico">
-                </form>
-                <div class="escondido form_loading">
-                    <div class="loader"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="titulo_e_botao">
-            <h2>Administrar Serviços</h2>
-            <button id="add_button">
-                <img src="../../assets/img/add-icon.png" alt="">
-                Cadastrar serviço
-            </button>
-        </div>
-       
-
-        <div id="loading">
-            <div class="loader"></div>
-            <p>Carregando</p>
-        </div>
-
-        <div id="servicos_cadastrados">
+        <form id="cadastrar_usuario" class="admin_form normal_form">
             
-        </div>
+            <h3>Novo Usuário</h3>
+            <p class="label_required obrigatorios">Campos Obrigatórios</p>
 
-        
-        
+            <label for="nome_usuario" class="label_required">Nome completo</label>
+            <input type="text" name="nome_usuario" id="nome_usuario" maxlength="100" minlength="8" placeholder="Digite aqui o nome completo do usuário" required>
+
+            <label for="nascimento_usuario" class="label_required">Data de nascimento</label>
+            <input type="date" name="nascimento_usuario" id="nascimento_usuario" required>
+
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" maxLength="9" minlength="8" placeholder="Ex: 00000-000"/>
+
+            <label for="logradouro">Endereço</label>
+            <input type="text" name="logradouro" id="logradouro" maxlength="150" minlength="8" placeholder="Ex: R. Barão de Juparanã">
+            
+            <label for="bairro">Bairro</label>
+            <select name="bairro" id="bairro">
+                <option disabled selected label="Selecione o bairro"></option>
+            </select>
+
+            <label for="numero">Nº</label>
+            <input type="number" name="numero" id="numero" max="5000" min="1" placeholder="Ex: 43">
+
+            <label for="email" class="label_required">Email de acesso</label>
+            <input type="email" name="email" id="email" required placeholder="Ex: email@email.com">
+
+            <label for="senha" class="label_required">Nova senha</label>
+            <input type="password" name="senha" id="senha" max="100" min="6" placeholder="Digite a senha do novo usuário" required>
+
+            <label for="confirmar_senha" class="label_required">Confirmar senha</label>
+            <input type="password" name="confirmar_senha" id="confirmar_senha" max="100" min="5" placeholder="Confirme a senha" required>
+
+            <input type="submit" value="Cadastrar" class="submit" id="submit_user">
+        </form>
     </div>
 </main>
 
@@ -194,9 +189,11 @@
         </div>
     </div>
 </footer>
-<script src="../../js/index.js"></script>
-<script src="../../js/admin.js"></script>
-<script src="../../js/admServicos.js"></script>
+<script src="../assets/jquery-plugins/jquery.mask.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/admUsuarios.js"></script>
+<body>
     
 </body>
 </html>
