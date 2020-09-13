@@ -1,0 +1,748 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 400;
+}
+
+/* PESOS DA FONTE: 400,500,600,700,800 */
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: #CCC;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #44b4fa;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #ff9400;
+}
+
+.loader {
+    margin: auto;
+    border: 0.5em solid #dbdbdb;
+    border-radius: 50%;
+    border-top: 0.5em solid #023c58;
+    border-right: 0.5em solid #023c58;
+    width: 5em;
+    height: 5em;
+    animation: spin 0.75s linear infinite;
+    -webkit-animation: spin 0.75s linear infinite; /* Safari */
+}
+
+#loading{
+    margin:2em auto;
+    text-align: center;
+    width: 100%;
+}
+
+#loading p{
+    margin-top: 0.5em;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.container{
+    width: 75% ;
+    display: block;
+}
+
+.content{
+    width: 80% ;
+    margin: auto;
+}
+
+nav{
+    z-index: 900;
+    background-color: #0080CE;
+    position: fixed;
+    padding: 2.5em 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    box-shadow: 0 15px 30px #000000;
+    overflow: auto;
+    transition: 0.9s ease-in-out;
+
+}
+
+
+.logo_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin:1em 0px 4em 0px;
+}
+
+#menu_icon{
+    z-index: 1001;
+    position: fixed;
+    /* top: 2em; */
+    left: 25%;
+    border:1px solid #0080CE;
+    border-radius: 0px 20px 20px 0;
+    padding: 0.5em;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: #0080CE;
+    transition: 0.9s ease-in-out;
+
+}
+
+.menu_hidden_icon{
+    left: 0px !important;
+    transition: 0.9s ease-in-out;
+}
+
+#menu_icon img{
+    height: 2em;
+}
+
+.logo{
+    height: 9em;
+    margin-right: 1.5em;
+}
+
+h1{
+    color: #FFFFFF;
+    font-size: 3em;
+}
+
+h1 span{
+    font-weight: 800;
+}
+
+nav ul{
+    list-style-type: none;
+    width: 85%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    height: 70%;
+    padding-bottom: 5em;
+}
+
+.nav_link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FFF;
+    padding: 0.75em 0;
+    font-size: 1.85em;
+}
+
+.nav_link:hover{
+    transition: 0.15s;
+    color: #ffc400;
+    transform: translate(7px)
+}
+
+.nav_link img{
+    height: 2em;
+    margin-right: 1em;
+}
+
+main{
+    background-color: #EBEBEB;
+    min-height: 100vh;
+    padding: 2em 0;
+    margin-left: 25%;
+    transition: 1s ease-in-out;
+
+}
+
+.full_width{
+    width: 100%;
+    margin-left: 0;
+    transition: 0.9s ease-in-out;
+}
+
+.hidden_nav{
+    transform: translate(-110%);
+    transition: 1s ease-in-out;
+}
+
+#login{
+    margin-top: 1em;
+}
+
+#login::before{
+    content: "";
+    margin-bottom: 10em;
+    display: block;
+    margin: auto;
+    background-color : #ffffffbd;
+    height: 3px;
+}
+
+.rotated{
+    transform: rotate(180deg);
+}
+
+.not_rotated{
+    transform: none;
+}
+
+h2{
+    color: #147CA6;
+    font-size: 3em;
+    font-weight: 600;
+    text-align: right;
+    margin-bottom: 3.5em;
+}
+
+#saude{
+    font-weight: 800;
+    color: #CF1516;
+}
+
+#poa{
+    font-weight: 800;
+}
+
+.text_1{
+    font-size: 2em;
+    color: #3C3E3E;
+}
+
+.main_link{
+    cursor: pointer;
+    transition: 2s;
+}
+
+.main_box{
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    box-shadow: 15px 10px 15px #00000067;
+    height: 12em;
+    margin: 1.5em 0;
+    padding: 0.5em 2.5em;
+    transition: 0.3s ease-in-out;
+}
+
+.main_box:hover{
+    transition: 0.3s ease-in-out;
+    transform: translate(1.2em) scale(1.02,1.02);
+    background-color: #ffc400;
+}
+
+.icon{
+    height: 90%;
+    margin-right: 1em;
+}
+
+h3{
+    color: #147CA6;
+    font-size: 2.5em;
+    font-weight: 800;
+}
+
+.description{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+
+
+footer{
+    background-color: #00314F;
+    margin-left: 25%;
+    padding: 2em 0;
+    color: #DBDBDB;
+    transition: 1s ease-in-out;
+
+}
+
+#flex_textos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #ff9400;
+}
+
+#flex_textos p{
+    width: 33.33%;
+}
+
+#direitos{
+    font-size: 0.8em;
+    width: 40% !important;
+}
+
+#footer_title{
+    font-weight: 800;
+}
+
+
+#dev_profile{
+    color: #FF9400;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+
+.escondido{
+    display: none;
+}
+
+.exibido{
+    display: block;
+    order: 1;
+}
+
+#nao_encontrado{
+    font-size: 1.5em;
+    color: #B20808;
+}
+
+#flex_links{
+    padding:1em 0;
+    width: 100%;
+    max-height: 10em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column{
+    display: flex;
+    flex-flow: column nowrap;
+    list-style-type: none;
+    width: 33.34%;
+}
+
+#flex_links li{
+    padding: 0.1em 0;
+
+}
+
+#flex_links a{
+    text-decoration: none;
+    color: #e1e2e4;
+    margin: 3px 0;
+}
+
+#flex_links a:hover{
+    text-decoration: underline;
+}
+
+.column span{
+    color: #8FA6B4;
+    text-align: left;
+}
+
+#column_1{
+    width: 40% !important;
+}
+
+
+
+
+@media only screen and (max-width: 1600px){
+    nav{
+        padding: 1.5em 0;
+        box-shadow: 0 10px 10px #000000;
+    }
+
+
+    h1{
+        font-size: 2em;
+    }
+
+    .logo{
+        height: 6.5em;
+    }
+
+    .logo_box{
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .nav_link{
+        padding: 0.75em 0;
+        margin: 0;
+        font-size: 1.2em;
+        transition: 0.15s;
+
+    }
+
+    .nav_link img{
+        margin-right: 0em;
+    }
+    
+    .nav_link:hover{
+        color: #ffc400;
+        transform: translate(7px)
+    }
+    
+    .nav_link img{
+        height: 2em;
+        margin-right: 1em;
+    }
+
+    nav ul{
+        padding-bottom: 2em;
+    }
+
+    h2{
+        font-size: 2em;
+        margin-bottom: 3em;
+    }
+
+    .text_1{
+        font-size: 1.5em;
+    }
+
+    .main_box{
+        height: 8em;
+        margin: 1em 0;
+        padding: 0.5em 2.5em;
+        transition: 0.3s ease-in-out;
+    }
+
+    h3{
+        font-size: 2em;
+    }
+
+    .description{
+        font-size: 1em;
+    }
+
+}
+
+ /* Aqui inverte o nav pelo nav escondido. Ou seja, o nav estará escondido, e o "nav escondido" é o que será exibido */
+@media only screen and (max-width:1100px){
+    nav{
+        height: 100vh;
+        left: -100%;
+    }
+
+    #menu_icon{
+        left: 0% !important;
+        position: fixed;
+        transition: 0.5s;
+    }
+
+    #menu_icon img{
+        height: 2em;
+    }
+
+    .hidden_nav{
+        width: 80%;
+        left: calc(80% + 2.5em);
+        transition: 0.5s;
+    }
+
+    .menu_hidden_icon{
+        transform: rotate(180deg);
+        transition: 0.5s;
+    }
+    
+    h2{
+        font-size: 2.5em;
+    }
+
+    .text_1{
+        font-size: 2em;
+    }
+
+    .main_box{
+        margin:2.5em 0;
+        height: 10em;
+    }
+
+    .description{
+        font-size: 1.5em;
+    }
+
+    #menu_icon img{
+        height:4em;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    main{
+        margin-left: 0;
+    }
+
+    footer{
+        margin-left: 0;
+    }
+}
+
+
+@media only screen and (max-width: 800px){
+    .content{
+        width: 85%;
+    }
+
+    #mobile_title{
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 60%;
+        margin: auto;
+        margin-bottom: 2em;
+    }
+
+    #subtitle::before{
+        content: "";
+        display: block;
+        height: 3px;
+        width: 100%;
+        margin: auto;
+        background: #0080ce;
+        margin-bottom: 0.5em;
+    }
+
+    #mobile_title h2{
+        margin: 0;
+        text-align: left;
+        font-size: 3em;
+        font-weight: 600;
+    }
+
+    #mobile_title h2 span{
+        font-weight: 800;
+    }
+
+    #mobile_title img{
+        height: 9em;
+    }
+
+    .logo_box{
+        flex-flow: row nowrap;
+    }
+
+    .logo{
+        height:5em;
+    }
+
+    h1{
+        font-size: 1.5em;
+    }
+
+    h2{
+        font-size: 1.75em;
+        text-align: left;
+    }
+
+    .text_1{
+        font-size: 1.5em;
+        margin-bottom: -1em;
+    }
+
+    .main_box{
+        font-size: 0.8em;
+        box-shadow: 10px 5px 10px #00000055;
+    }
+
+    footer{
+        padding:3em 0;
+    }
+
+    #flex_textos p{
+        font-size: 0.8em;
+    }
+
+
+    .nav_link{
+        font-size: 2em;
+    }
+}
+
+
+@media only screen and (max-width: 620px){
+    .main_box{
+        height: 12em;
+    }
+    
+
+    .icon{
+        height: 70%;
+    }
+
+    .description{
+        font-size: 1.2em;
+    }
+
+    #flex_textos{
+        font-size: 1em;
+    }
+
+    #mobile_title img{
+        height: 6em;
+    }
+
+    #mobile_title h2{
+        font-size: 2em;
+    }
+}
+
+
+@media only screen and (max-width: 450px){
+    .hidden_nav{
+        width: 85%;
+    }
+
+    .content{
+        width: 90%;
+    }
+
+    .logo_box{
+        margin-top: 3em;
+        margin-bottom: 8em;
+        padding: 0;
+    }
+
+    nav{
+        justify-content: flex-start;
+        box-shadow: 0px 100px 100px #000;
+    }
+
+    .main_box{
+        flex-flow: column;
+        height: inherit;
+        padding:2em 1em;
+    }
+
+    #mobile_title{
+        margin: 2em 0;
+        width: 100%;
+    }
+
+    #mobie_title h2{
+        font-size: 2em;
+    }
+    
+    #subtitle{
+        font-size: 1.5em;
+        text-align: left;
+        margin-bottom: 2em;
+    }
+
+    .icon{
+        height: 10em;
+    }
+
+    h3{
+        text-align: center;
+        margin-bottom:0.5em;
+    }
+
+    #menu_icon img{
+        height: 2em;
+    }
+
+    
+    nav ul{
+        height: 30%;
+    }
+
+    .nav_link{
+        font-size: 1.2em;
+    }
+
+    .nav_link img{
+        height: 2em;
+    }
+
+    #direitos{
+        width: unset !important;
+    }
+
+    footer{
+        padding-bottom: 6em;
+    }
+
+    #flex_textos{
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        text-align: left;
+        height: 12.5vh;
+    }
+
+    #flex_links{
+        flex-flow: column;
+        font-size: 0.7em;
+    }
+
+
+    #column_1{
+        width: unset !important;
+    }
+
+    .column{
+        width: 100%;
+        padding: 0.5em 0;
+    }
+
+    #flex_textos p{
+        width: unset;
+    }
+
+
+}
+
+@media only screen and (min-height: 1000px) and (orientation: portrait){
+
+    .logo_box{
+        /* margin-left: auto;
+        flex-flow: column;
+        align-items: center; */
+        margin-bottom: 5em;
+        height: 15vh;
+        font-size: 2em;
+    }
+    
+
+    .logo{
+        margin-right: 0;
+    }
+
+    nav{
+        position: fixed;
+        width: 60%;
+        max-height: 100vh;
+        justify-content: flex-start;
+    }
+
+    #menu_icon{
+        left: 60%;
+    }
+
+    nav ul{
+        height: 50%;
+    }
+}

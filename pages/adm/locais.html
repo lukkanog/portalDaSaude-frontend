@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/img/poa-logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="../../css/index.css" rel="stylesheet">
+    <link href="../../css/admin.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Administrar Locais | Portal da Saúde</title>
+</head>
+
+<body>
+    <span id="menu_icon">
+        <img src="../../assets/img/menu-icon.png" alt="Abrir/fechar o menu de navegação">
+    </span>
+    <nav class="sidebar">
+        <a href="admin.html">
+            <div class="logo_box">
+                <img class="logo" src="../../assets/img/poa-logo.png" alt="Símbolo da Estância Hidromineral de Poá" />
+                <h1>
+                    Portal da
+                    <br />
+                    <span>Saúde</span>
+                </h1>
+            </div>
+        </a>
+
+        <ul>
+            <li>
+                <a href="locais.html" class="nav_link">
+                    <img src="../../assets/img/adm-icon.png" alt="" />
+                    <p>Locais de atendimento</p>
+                </a>
+            </li>
+            <li>
+                <a href="servicos.html" class="nav_link">
+                    <img src="../../assets/img/adm-icon.png" alt="" />
+                    <p>Serviços de saúde</p>
+                </a>
+            </li>
+            <li>
+                <a href="areas.html" class="nav_link">
+                    <img src="../../assets/img/adm-icon.png" alt="" />
+                    <p>Áreas de atendimento</p>
+                </a>
+            </li>
+            <li>
+                <a href="eventos.html" class="nav_link">
+                    <img src="../../assets/img/adm-icon.png" alt="" />
+                    <p>Campanhas</p>
+                </a>
+            </li>
+            <li>
+                <a href="usuarios.html" class="nav_link">
+                    <img src="../../assets/img/adm-icon.png" alt="" />
+                    <p>Adicionar administrador</p>
+                </a>
+            </li>
+            <li id="login">
+                <a href="../login.html" class="nav_link">
+                    <img class="not_rotated" id="login-logout_icon" src="../../assets/img/logout-icon.png" alt="" />
+                    <p id="login_text">Sair</p>
+                </a>
+            </li>
+
+            <!-- <li id="cadastro">
+                <a href="../../#" class="nav_link">
+                    <img src="../../assets/img/register-icon.png" alt="" />
+                    <p>Cadastrar-se</p>
+                </a>
+            </li>
+            <li id="bairro" class="escondido">
+                <a href="../../#" class="nav_link">
+                    <img src="../../assets/img/bairro-icon.png" alt="" />
+                    <p>Meu Bairro</p>
+                </a>
+            </li> -->
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="content">
+            <div id="mobile_title" class="escondido">
+                <img class="logo" src="../../assets/img/poa-logo.png" alt="Símbolo da Estância Hidromineral de Poá" />
+                <h2>
+                    Portal da
+                    <br />
+                    <span>Saúde</span>
+                </h2>
+            </div>
+
+            <!-- <div class="modal" id="modal_excluir">
+                <div class="modal_content">
+                    <h2 class="form_title">Deseja excluir o local?</h2>
+                    <div class="delete_options">
+                        <button class="botao" id="botao_excluir">Excluir</button>
+                        <button class="botao" id="botao_cancelar">Cancelar</button>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="modal escondido" id="modal_local">
+                <div class="modal_content">
+                    <div class="titulo_e_botao">    
+                        <h2 class="form_title">Local</h2>
+                        <img class="close_icon" src="../../assets/img/add-icon.png" alt="Fechar formulário">
+                    </div>
+
+                    <form id="local_form" class="admin_form">
+
+                        <label for="nome_local">Nome do local</label>
+                        <input type="text" name="nome_local" id="nome_local" maxlength="100" minlength="8" placeholder="Ex: Hospital Guido Guida" required>
+
+                        <label for="tipo_local">Tipo do local</label>
+                        <select name="tipo_local" id="tipo_local" required>
+                            <option disabled selected label="Selecione o tipo"></option>
+                        </select>
+
+                        <label for="cep">CEP</label>
+                        <input type="text" name="cep" id="cep" maxLength="9" minlength="8" required placeholder="Ex: 00000-000"/>
+
+                        <label for="logradouro">Logradouro</label>
+                        <input type="text" name="logradouro" id="logradouro" maxlength="150" minlength="8" required placeholder="Ex: R. Barão de Juparanã">
+                        
+                        <label for="bairro">Bairro</label>
+                        <select name="bairro" id="bairro">
+                            <option disabled selected label="Selecione o bairro"></option>
+                        </select>
+
+                        <label for="numero">Nº</label>
+                        <input type="number" name="numero" id="numero" max="5000" min="1" required placeholder="Ex: 43">
+
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" maxlength="20" minlength="14" required placeholder="Ex: (11) 99999-9999">
+
+                        <label for="capacidade">Capacidade máxima de pessoas atendidas (opcional)</label>
+                        <input type="number" name="capacidade" id="capacidade" max="15000" placeholder="Este campo é opcional">
+
+                        <input type="submit" value="Salvar" class="submit" id="submit_local">
+                    </form>
+                    <div class="escondido form_loading">
+                        <div class="loader"></div>
+                    </div>    
+                </div>
+            </div>
+
+            <div class="modal escondido" id="modal_servico">
+                <div class="modal_content">
+                    <div class="titulo_e_botao">    
+                        <h2 class="form_title">Serviço</h2>
+                        <img class="close_icon" src="../../assets/img/add-icon.png" alt="Fechar formulário">
+                    </div>
+
+                    <form id="servico_form" class="admin_form">
+
+                        <label for="servico">Serviço</label>
+                        <select name="servico" id="servico" required>
+                            <option disabled selected label="Selecione o serviço"></option>
+                        </select>
+    
+                        <label for="situacao">Situação</label>
+                        <select name="situacao" id="situacao" required>
+                            <option disabled selected label="Selecione a situação"></option>
+                        </select>
+
+                        <input type="submit" value="Salvar" class="submit" id="submit_servico">
+                    </form>
+                    <button class="form-delete-button escondido" id="remover_servico">Remover serviço do local</button>
+                    <div class="escondido form_servico_loading">
+                        <div class="loader"></div>
+                    </div>    
+                </div>
+            </div>
+
+
+            <div class="titulo_e_botao">
+                <h2>Administrar Locais</h2>
+                <button id="add_button">
+                    <img src="../../assets/img/add-icon.png" alt="">
+                    Cadastrar local
+                </button>
+            </div>
+
+            <section id="locais_cadastrados">
+                <div id="loading">
+                    <div class="loader"></div>
+                    <p>Carregando</p>
+                </div>
+
+                <!-- aqui será inserida a lista de locais -->
+            </section>
+        </div>
+    </main>
+
+    <footer class="container">
+        <div class="content">
+            <div id="flex_textos">
+                <p id="direitos">2020 © Todos os direitos reservados </p>
+                <p id="footer_title"> Portal da Saúde de Poá</p>
+                <p>Desenvolvido por <a id="dev_profile"
+                        href="https://www.linkedin.com/in/lucas-nogueira-de-souza/">Lucas Nogueira</a></p>
+            </div>
+
+            <div id="flex_links">
+                <ul class="column" id="column_1">
+                    <li>
+                        <a href="../locais.html">Locais de atendimento</a>
+                    </li>
+                    <li>
+                        <a href="../areas.html">Áreas de atendimento</a>
+                    </li>
+                    <li>
+                        <a href="../servicos.html">Serviços oferecidos</a>
+                    </li>
+                    <li>
+                        <a href="../eventos.html">Eventos e campanhas</a>
+                    </li>
+                </ul>
+                <ul class="column" id="column_2">
+                    <li>
+                        <a href="../login.html">Fazer Login</a>
+                    </li>
+                    <li>
+                        <a href="https://saude.gov.br/" target="_blank">Ministério da Saúde</a>
+                    </li>
+                    <li>
+                        <a href="https://prefeituradepoa.sp.gov.br/" target="_blank">Prefeitura de Poá</a>
+                    </li>
+                    <li>
+                        <a href="https://prefeituradepoa.sp.gov.br/secretaria-de-saude/" target="_blank">Secretaria da
+                            Saúde</a>
+                    </li>
+                </ul>
+                <ul class="column" id="column_3">
+                    <li>
+                        <a href="../sobre.html">Sobre o Portal da Saúde</a>
+                    </li>
+                    <li>
+                        <span>Ícones por <a class="icon_link" href="https://www.flaticon.com/authors/freepik"
+                                title="Freepik">Freepik</a> do <a class="icon_link" href="https://www.flaticon.com/"
+                                title="Flaticon">FlatIcon</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../../assets/jquery-plugins/jquery.mask.min.js"></script>
+    <script src="../../js/index.js"></script>
+    <script src="../../js/admin.js"></script>
+    <script src="../../js/admLocais.js"></script>
+</body>
+
+</html>

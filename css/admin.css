@@ -1,0 +1,528 @@
+h2{
+    text-align: left;
+    margin:1em 0;
+    font-weight: 800;
+}
+
+
+nav{
+    background-color: #147CA6;
+    border: none;
+    z-index: 900;
+}
+
+#menu_icon{
+    background-color: #147CA6;
+    border : none;
+}
+
+nav p{
+    color: #FFF;
+}
+
+.titulo_e_botao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #147CA6;
+}
+
+#add_button{
+    border: none;
+    max-height: 3em;
+    box-shadow: 10px 10px 15px #00000051;
+    padding: 0.5em 1em 0.5em 0.75em;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#add_button:hover{
+    filter: brightness(105%);
+    box-shadow: 10px 10px 15px #00000070;
+
+}
+
+#add_button img{
+    height: 2em;
+    margin-right: 0.5em;
+}
+
+
+.dropdown{
+    background: #FFF;
+    box-shadow: 0px 10px 15px #00000051;
+    padding: 1.5em;
+    margin-bottom: 1em;
+}
+
+.dropdown:hover{
+    box-shadow: 10px 15px 20px #00000065;
+    transition: 0.25s;
+}
+
+.btn_dropdown{
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.ver_mais{
+    display: flex;
+    align-items: center;
+}
+
+.turned{
+    transform: rotate(180deg);
+    transition: 0.25s;
+}
+
+.ver_mais img{
+    transition: 0.25s;
+    margin-left: 0.5em;
+    height: 1em;
+}
+
+.modal{
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    background-color: #000000cc;
+    display: flex;
+    align-items: center;
+}
+
+.escondido{
+    display: none !important;
+}
+
+.modal_content{
+    margin: auto;
+    width: 30%;
+    max-height: calc(90vh - 1em);
+    background-color: #FFF;
+    padding: 2em;
+}
+
+input, select, textarea{
+    margin-bottom: 1.5em;
+    padding: 0.5em;
+}
+
+textarea{
+    resize: none;
+}
+
+label{
+    font-size: 1.2em;
+}
+
+.submit{
+    background-color: #0080Ce;
+    color: #FFF;
+    border: none;
+    padding: 0.75em 0;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.form-delete-button{
+    background-color: #CF1516;
+    color: #FFF;
+    border: none;
+    padding: 0.75em 0;
+    transition: 0.2s;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.submit:hover,
+.form-delete-button:hover{
+    filter: brightness(120%);
+}
+
+label{
+    margin-bottom: 0.2em;
+}
+
+.close_icon{
+    height: 2em;
+    filter: grayscale(100%);
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.close_icon:hover{
+    filter: grayscale(100%) brightness(50%);
+}
+
+.modal_content .titulo_e_botao{
+    margin-bottom: 2em;
+}
+
+.form_title{
+    margin: 0em;
+}
+
+
+.admin_form{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.opcoes{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 2em;
+}
+
+.option{
+    height: 1em;
+    padding: 0.25em;
+    margin-bottom: 2em;
+    filter: opacity(80%);
+    cursor: pointer;
+}
+
+.option:hover{
+    filter: opacity(100%);
+}
+
+.caracteristicas{
+    position: relative;
+    top: 0;
+}
+
+.caracteristica{
+    padding: 0.5em 0;
+}
+
+.smaller{
+    font-size: 0.9em;
+}
+
+.valor{
+    font-size: 1.25em;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.dropdown_flex{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    border-top: 1px solid #807e7e;
+    margin: 1.5em 0;
+}
+
+.dropdown-header{
+    /* margin-bottom: 1em; */
+    font-weight: 600;
+}
+
+.dropdown_content{
+    display: none;
+}
+
+.dropdown-menu{
+    margin-top: 1em;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    margin-right: -2em;
+}
+
+.dropdown-item{
+    background-color: #dbdbdb;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    margin-right: 2em;
+    width: 8.5em;
+    height: 8.5em;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    transition: 0.25s;
+}
+
+.item_title{
+    font-weight: 600;
+    color: #147CA6;
+}
+
+.item_subtitle::before{
+    content: "";
+    display: block;
+    margin: 0.25em 0;
+    height: 1px;
+    width: 100%;
+    background-color: #807e7e;
+}
+
+.item_subtitle{
+    width: 100%;
+    font-size: 0.9em;
+}
+
+
+
+.submenu_icon{
+    cursor: pointer;
+
+    height: 1.2em;
+    margin-bottom: 1.5em;
+    position: relative;
+    left: 92.5%;
+    transition : 0.2s;
+}
+
+.submenu{
+    padding: 1em;
+    position: relative;
+    left: 100%;
+    background-color: #FFF;
+    box-shadow: 10px 15px 10px #00000052;
+}
+
+
+.submenu_icon:hover{
+    filter: opacity(50%);
+}
+
+.dropdown-item:hover{
+    box-shadow:5px 2px 10px #147CA6;
+}
+
+.add_item img{
+    margin: auto;
+}
+
+.add_item{
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.add_item:hover{
+    filter: unset !important;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+.delete_options{
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao{
+    width: 48.5%;
+    height: 8vh;
+    font-size: 1em;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.botao:hover{
+    /* filter: brightness(80%); */
+    border: 2px solid #ff9400;
+}
+
+#botao_excluir{
+    background-color: #147ca6;
+    color: #bfecfd
+}
+
+#botao_cancelar{
+    background-color: #757575;
+    color: #fff;
+}
+
+.normal_form{
+    background-color: #fff;
+    padding: 2em 10%;
+    margin-top: 2em;
+    box-shadow: 10px 10px 15px #00000050;
+}
+
+.label_required{
+    display: flex;
+    align-items: center;
+}
+
+.label_required::after{
+    content: "*";
+    color: #CF1516;
+    font-size: 1.5em;
+    font-family: 900;
+    display: block;
+    position: relative;
+    margin-top: 0.2em;
+}
+
+.obrigatorios{
+    color: #CF1516;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+.form-observation{
+    margin-bottom: 1em;
+    color: #4b4b4b;
+    font-size: .75em;
+}
+
+.delete-observation{
+    margin: 1em 0;
+    color: #4b4b4b;
+    font-size: 1em;
+}
+
+
+@media only screen and (max-width: 1400px){
+    .dropdown-item{
+        width: 9.25em;
+        /* height: 7em; */
+    }
+
+    input, select{
+        padding: 0.25em;
+        margin-bottom: 1em;
+    }
+
+    label{
+        font-size: 0.9em;
+    }
+}
+
+
+@media only screen and (max-width: 1100px){
+    .modal_content{
+        width: 60%;
+    }
+    
+    input, select{
+        padding: 0.75em;
+        margin-bottom: 1em;
+        font-size: 1.25em;
+    }
+
+    label{
+        font-size: 1.5em;
+    }
+
+    .submit{
+        font-size: 1.5em;
+        padding: 0.5em 0;
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width:800px){
+    input, select{
+        padding: 0.5em;
+        margin-bottom: 0.5em;
+        font-size: 1em;
+    }
+
+    .form_title{
+        font-size: 2.25em;
+    }
+
+    label{
+        font-size: 1em;
+    }
+
+    .submit{
+        font-size: 1.25em;
+        padding: 0.65em 0;
+        
+    }
+    
+    
+    .dropdown-item{
+        width: 9em;
+        height: 7em;
+        padding:1em;
+    }
+
+    .submenu_icon{
+        margin-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 600px){    
+    #add_button{
+        position: fixed;
+        top: 90vh;
+        right: 0;
+        border: 1px solid #b4b4b4;
+        border-radius: 15px 0 0 15px;     
+        box-shadow: 5px 15px 25px #00000075;
+    }
+
+    h3{
+        text-align: left;
+    }
+    
+    .modal_content{
+        width: calc(90% - 1.5em);
+        padding: 1.5em;
+        max-height: 95vh;
+    }
+
+    .submenu_icon{
+        margin-bottom: 0.5em;
+    }
+    
+    .dropdown-menu{
+        justify-content: space-between;
+    }
+    
+    .dropdown-item{
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .modal_content{
+        width: calc(90% - 1em);
+        padding: 1em;
+    }
+
+    label{
+        font-size: 0.8em;
+    }
+
+    input,select{
+        padding: 0.25em;
+    }
+
+    .submit{
+        font-size: 1em;
+        padding: 0.5em;
+    }
+
+    .normal_form{
+        padding: 2em 5%;
+    }
+}
+
+
