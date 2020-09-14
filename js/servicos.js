@@ -23,7 +23,7 @@ async function carregarServicos(){
         if (!erro){
             erro = true;
             alert("Ocorreu um erro inesperado. Tente novamente mais tarde.");
-            window.location.href = "index.html";
+            window.location.href = "";
         }
     })
 }
@@ -85,7 +85,7 @@ async function carregarCategorias(){
         if (!erro){
             erro = true;
             alert("Ocorreu um erro inesperado. Tente novamente mais tarde.");
-            window.location.href = "index.html";
+            window.location.href = "/";
         }
     })
 }
@@ -121,7 +121,7 @@ $("#categorias").change(function(){
 
 
 gerarUrl = (servico) =>{
-    var url = "servico.html?idServico=" + servico.idServico;
+    var url = "servico?idServico=" + servico.idServico;
     return url;
 }
 

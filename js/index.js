@@ -41,7 +41,7 @@ function verificarUsuarioLogado(){
         iconeLogin.className="rotated";
 
     } else{
-        linkLogin.firstChild.href = "index.html";
+        linkLogin.firstChild.href = "/";
         
         //fazer logout
         linkLogin.addEventListener("click",() =>{

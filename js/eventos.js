@@ -20,7 +20,7 @@ async function carregarEventos() {
         .catch(error => {
             console.log(error);
             alert("Ocorreu um erro inesperado. Tente novamente mais tarde.");
-            window.location.href = "index.html";
+            window.location.href = "/";
         })
 }
 
@@ -174,7 +174,7 @@ formatarData = (evento) =>{
 }
 
 gerarUrl = (local) =>{
-    var url = "local.html?idLocal=" + local.idLocal;
+    var url = "local?idLocal=" + local.idLocal;
     return url;
 }
 

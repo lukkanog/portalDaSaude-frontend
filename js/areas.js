@@ -17,7 +17,7 @@ async function carregarAreas(){
     .catch(error => {
         console.log(error);
         alert("Ocorreu um erro inesperado. Tente novamente mais tarde.");
-        window.location.href = "index.html";
+        window.location.href = "/";
     })
 }
 
@@ -126,6 +126,6 @@ pararDeCarregar = () => {
 }
 
 gerarUrl = (servico) =>{
-    var url = "servico.html?idServico=" + servico.idServico;
+    var url = "servico?idServico=" + servico.idServico;
     return url;
 }

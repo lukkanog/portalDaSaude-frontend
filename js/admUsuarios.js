@@ -75,7 +75,7 @@ async function carregarBairros() {
         .catch(error => {
             console.log(error);
             alert("Ocorreu um erro ao carregar os bairros cadastrados. Tente novamente mais tarde.");
-            window.location.href = "admin.html";
+            window.location.href = "../";
         })
 }
 

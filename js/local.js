@@ -26,7 +26,7 @@ function obterParametro() {
             return id;
         }
     } else {
-        window.location.href = "locais.html";
+        window.location.href = "locais";
     }
 }
 
@@ -41,7 +41,7 @@ async function buscarLocal(id) {
         .catch(error => {
             console.log(error);
             alert("Ocorreu um erro inesperado. Tente novamente mais tarde.");
-            window.location.href = "index.html";
+            window.location.href = "/";
         })
 
 }
@@ -219,7 +219,7 @@ exibirNaoEncontrado = () => {
 
     var linkVoltar = document.createElement("a");
     linkVoltar.textContent = "Voltar";
-    linkVoltar.href = "locais.html"
+    linkVoltar.href = "locais"
 
     mainContent.appendChild(alerta);
     mainContent.appendChild(linkVoltar);

@@ -24,7 +24,7 @@ function obterParametro() {
             return id;
         }
     } else {
-        window.location.href = "servicos.html"
+        window.location.href = "servicos"
     }
 }
 
@@ -40,7 +40,7 @@ async function buscarServico(id) {
         .catch(error => {
             console.log(error);
             alert("Ocorreu um erro inesperado. Tente novamente mais tarde.");
-            window.location.href = "index.html";
+            window.location.href = "";
         })
 }
 
@@ -135,7 +135,7 @@ preencherConteudo = (conteudo) => {
 
 
 gerarUrl = (local) => {
-    var url = "local.html?idLocal=" + local.idLocal;
+    var url = "local?idLocal=" + local.idLocal;
     return url;
 }
 

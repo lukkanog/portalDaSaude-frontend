@@ -28,7 +28,7 @@ async function carregarLocais(){
         if (!erro){
             erro = true;
             alert("Ocorreu um erro inesperado. Tente novamente mais tarde.");
-            window.location.href = "index.html";
+            window.location.href = "/";
         }
     })
 }
@@ -99,7 +99,7 @@ preencherConteudo = (locais) => {
 }
 
 gerarUrl = (local) =>{
-    var url = "local.html?idLocal=" + local.idLocal;
+    var url = "local?idLocal=" + local.idLocal;
     return url;
 }
 
@@ -117,7 +117,7 @@ async function carregarBairros(){
         if (!erro){
             erro = true;
             alert("Ocorreu um erro inesperado. Tente novamente mais tarde.");
-            window.location.href = "index.html";
+            window.location.href = "/";
         }
     })
 }
@@ -144,7 +144,7 @@ async function carregarTipos(){
         if (!erro){
             erro = true;
             alert("Ocorreu um erro inesperado. Tente novamente mais tarde.");
-            window.location.href = "index.html";
+            window.location.href = "/";
         }
     })
 }

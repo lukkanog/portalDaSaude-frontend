@@ -13,7 +13,7 @@ try {
     carregarLocais();
 } catch (error) {
     alert("Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.");
-    window.location.href = "../index.html";
+    window.location.href = "../";
 }
 
 

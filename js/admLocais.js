@@ -30,7 +30,7 @@ try{
     carregarSituacoes();
 } catch(error){
     alert("Ocorreu um erro inesperado. Tente novamente mais tarde.");
-    window.location.href = "../index.html";
+    window.location.href = "../";
 }
 
 $("#add_button").click(function () {

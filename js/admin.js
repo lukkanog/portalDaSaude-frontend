@@ -1,6 +1,6 @@
 
 if (!usuarioEstaVerificado()){
-    window.location.replace("../index.html")
+    window.location.replace("../")
 }
 
 
