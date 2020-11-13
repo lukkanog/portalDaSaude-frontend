@@ -24,12 +24,12 @@ function obterParametro() {
             return id;
         }
     } else {
-        window.location.href = "servicos"
+        window.location.href = "servicos";
     }
 }
 
 async function buscarServico(id) {
-    var url = "http://lukkanog-001-site1.ftempurl.com/api/servicosprestados/servico/" + id;
+    var url = "http://noglucass-001-site1.dtempurl.com/api/servicosprestados/servico/" + id;
 
     await fetch(url)
         .then(response => response.json())
